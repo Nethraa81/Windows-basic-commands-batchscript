@@ -26,98 +26,65 @@ Create a directory named "my-folder"
 
 ## COMMAND AND OUTPUT
 
-Remove the directory "my-folder"
+```
+mkdir %userprofile%\Desktop\MyLab
+```
+
+![image](https://github.com/user-attachments/assets/b90b44da-d014-4e87-9497-70369505687e)
+
 
 ## COMMAND AND OUTPUT
 
+Change to the "MyLab" directory and create an empty text file named "MyFile.txt" inside it.
+```
+cd %userprofile%\Desktop\MyLab
+type nul > MyFile.txt
+```
 
-Create the file Rose.txt
 
 ## COMMAND AND OUTPUT
 
+List the contents of the "MyLab" directory.
+```
+dir %userprofile%\Desktop\MyLab
+```
+![image](https://github.com/user-attachments/assets/f8b14e97-065d-497c-86e9-30a0b5fa443e)
 
-Create the file hello.txt using echo and redirection
 
 ## COMMAND AND OUTPUT
 
-Copy the file hello.txt into the file hello1.txt
+Copy "MyFile.txt" to a new folder named "Backup" on the desktop.
+```
+mkdir %userprofile%\Desktop\Backup
+copy MyFile.txt %userprofile%\Desktop\Backup
+```
+![image](https://github.com/user-attachments/assets/2a57880c-f2ea-4286-9405-b22cb1b87ff5)
 
 ## COMMAND AND OUTPUT
 
-Remove the file hello1.txt
-
-## COMMAND AND OUTPUT
-
-List out the file hello1.txt in the current directory
-
-## COMMAND AND OUTPUT
-
-List out all the associated file extensions 
-
-## COMMAND AND OUTPUT
+Move the "MyLab" directory to the "Documents" folder.
+```
+move MyLab Documents
+```
+![image](https://github.com/user-attachments/assets/9aaeb38f-33e7-4a24-b226-dd4cb924045c)
 
 
-Compare the file hello.txt and rose.txt
-
-## COMMAND AND OUTPUT
 
 ## Exercise 2: Advanced Batch Scripting
-Create a batch file named on the desktop. The batch file need to have a variable assigned with a desired name for ex. name="John" and display as "Hello, John".
+Create a batch script named "BackupScript.bat" that creates a backup of files with the ".docx" extension from the "Documents" folder to a new folder named "DocBackup" on the desktop.Modify the script to delete files with the ".docx" extension from the "Documents" folder after creating the backup. If *.docx file are not available in the Documents folder you can use “.pdf” files to copy.
 
+Open a notepad file named BackupScript.bat and enter the following:
 
-
-
-
+## COMMAND
+```
+@echo off
+mkdir %userprofile%\Desktop\DocBackup
+copy %userprofile%\Documents\*.docx %userprofile%\Desktop\DocBackup
+echo Backup completed successfully!
+```
 ## OUTPUT
 
-
-
-Create a batch file  on the desktop that checks whether a user-input number is odd or not. The script should:
-Prompt the user to enter a number.
-Calculate the remainder when the number is divided by 2.
-Display whether the number is odd or not.
-Ask the user if they want to check another number.
-Repeat the process if the user enters Y, and exit with a thank-you message if the user enters N.
-Handle invalid inputs for the continuation prompt (Y/N) gracefully.
-
-
-
-## OUTPUT
-
-
-
-
-Write a batch file that uses a FOR loop to iterate over a sequence of numbers (1 to 5) and displays each number with the label Number:. The output should pause at the end.
-
-
-
-
-## OUTPUT
-
-
-
-
-Write a batch script to check whether a file named sample.txt exists in the current directory. If the file exists, display the message sample.txt exists. Otherwise, display sample.txt does not exist. Pause the script at the end to view the result.
-
-Instructions:
-Use the IF EXIST conditional statement.
-Make sure the script works for files located in the same directory as the batch file.
-Use pause to keep the command window open after displaying the message.
-Expected Output (if the file exists):
-
-## OUTPUT
-
-
-Write a batch script that displays a simple menu with three options:
-Say Hello – Displays the message Hello, World!
-Create a File – Creates a file named newfile.txt with the content This is a new file
-Exit – Exits the script with a goodbye message
-The script should repeatedly display the menu until the user chooses to exit. Use goto statements to handle menu navigation.
-
-
-## OUTPUT
-
-
+![image](https://github.com/user-attachments/assets/8398cd51-0f5e-4544-aab3-ce1e91067bb4)
 
 # RESULT:
 The commands/batch files are executed successfully.
